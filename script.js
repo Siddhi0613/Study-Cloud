@@ -1,4 +1,3 @@
-  // ========== CUSTOM TIMER LOGIC ==========
   let timeInSeconds = 25 * 60;
   let timerInterval = null;
   
@@ -104,7 +103,7 @@
     setTimer(mins, secs);
   });
   
-  // ========== BREATHING EXERCISE ==========
+
   let breathInterval = null;
   let breathStep = 0;
   const breathCircle = document.getElementById('breathCircle');
@@ -162,7 +161,7 @@
     }
   });
   
-  // ========== MOTIVATION QUOTES ==========
+  
   const quotes = [
     "progress is still progress, even if it's small ☁️💖",
     "small steps every day lead to big results. keep floating! ✨",
@@ -183,7 +182,7 @@
     createGlitter(window.innerWidth/2, window.innerHeight/2 - 100);
   });
   
-  // ========== GLITTER EFFECT ==========
+
   function createGlitter(x, y) {
     for (let i = 0; i < 12; i++) {
       let glitter = document.createElement('div');
@@ -204,7 +203,7 @@
     }
   }
   
-  // ========== TO-DO LIST ==========
+
   let tasks = JSON.parse(localStorage.getItem('studycloud_tasks') || '[]');
   const taskList = document.getElementById('taskList');
   const taskInput = document.getElementById('taskInput');
@@ -254,7 +253,7 @@
     }
   });
   
-  // ========== NOTES ==========
+
   const notesArea = document.getElementById('notesArea');
   const noteWordCount = document.getElementById('noteWordCount');
   notesArea.value = localStorage.getItem('studycloud_notes') || '';
@@ -268,7 +267,7 @@
   notesArea.addEventListener('input', updateNoteStat);
   updateNoteStat();
   
-  // ========== NAVIGATION ==========
+
   document.querySelectorAll('[data-section]').forEach(link => {
     link.addEventListener('click', () => {
       const section = link.getAttribute('data-section');
@@ -277,8 +276,7 @@
     });
   });
   
-  // ========== RANDOM GLITTER RAIN ==========
-  setInterval(() => {
+    setInterval(() => {
     if (Math.random() > 0.85) {
       const randX = Math.random() * window.innerWidth;
       const randY = Math.random() * window.innerHeight;
